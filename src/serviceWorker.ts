@@ -1,45 +1,35 @@
-const ASSETS = [
-  "/",
-  "https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap",
-  "https://spacexdata.herokuapp.com/graphql",
-  "./App.tsx",
-  "./index.tsx",
-  "hover.css",
-  "App.css",
-  "./generated/graphql",
-  "./components/assets/spacex.png",
-  "./components/Launch/app.tsx",
-  "./components/Launch/launch.tsx",
-  "./components/Launch/query.ts",
-  "./components/Launch/styles.css",
-  "./components/LaunchDet/app.tsx",
-  "./components/LaunchDet/launchdet.tsx",
-  "./components/LaunchDet/query.ts",
-  "./components/LaunchDet/styles.css",
-  "./components/navbar/navbar.tsx",
-  "./components/navbar/stlyes.css",
-  './components/loading.tsx'
-];
-let cache_name = "Spacex"; // The string used to identify our cache
-
-this.addEventListener('install', (e) => {
-  console.log('[Service Worker] Install');
-  e.waitUntil(
-    caches.open(cache_name).then((cache) => {
-          console.log('[Service Worker] Caching all: app shell and content');
-      return cache.addAll(ASSETS);
-    })
-  );
-});
+// const CACHE_NAME = "v-1"
+// const urls = [
+//   "/",
+//   "https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap",
+//   "https://spacexdata.herokuapp.com/graphql",
+//   "./App.tsx",
+//   "./index.tsx",
+//   "hover.css",
+//   "App.css",
+//   "./generated/graphql",
+//   "./components/assets/spacex.png",
+//   "./components/Launch/app.tsx",
+//   "./components/Launch/launch.tsx",
+//   "./components/Launch/query.ts",
+//   "./components/Launch/styles.css",
+//   "./components/LaunchDet/app.tsx",
+//   "./components/LaunchDet/launchdet.tsx",
+//   "./components/LaunchDet/query.ts",
+//   "./components/LaunchDet/styles.css",
+//   "./components/navbar/navbar.tsx",
+//   "./components/navbar/stlyes.css",
+//   './components/loading.tsx'
+// ];
 
 const isLocalhost = Boolean(
   window.location.hostname === 'localhost' ||
-  // [::1] is the IPv6 localhost address.
-  window.location.hostname === '[::1]' ||
-  // 127.0.0.0/8 are considered localhost for IPv4.
-  window.location.hostname.match(
-    /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
-  )
+    // [::1] is the IPv6 localhost address.
+    window.location.hostname === '[::1]' ||
+    // 127.0.0.0/8 are considered localhost for IPv4.
+    window.location.hostname.match(
+      /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
+    )
 );
 
 type Config = {
@@ -73,7 +63,7 @@ export function register(config?: Config) {
         navigator.serviceWorker.ready.then(() => {
           console.log(
             'This web app is being served cache-first by a service ' +
-            'worker. To learn more, visit https://bit.ly/CRA-PWA'
+              'worker. To learn more, visit https://bit.ly/CRA-PWA'
           );
         });
       } else {
@@ -101,7 +91,7 @@ function registerValidSW(swUrl: string, config?: Config) {
               // content until all client tabs are closed.
               console.log(
                 'New content is available and will be used when all ' +
-                'tabs for this page are closed. See https://bit.ly/CRA-PWA.'
+                  'tabs for this page are closed. See https://bit.ly/CRA-PWA.'
               );
 
               // Execute callback
