@@ -44,7 +44,7 @@
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
           navigator.serviceWorker.register('./worker.ts').then(function(registration) {
-            console.log('Worker registration successful', registration.scope);
+            console.log('Worker registration successful');
           }, function(err) {
             console.log('Worker registration failed', err);
           }).catch(function(err) {
