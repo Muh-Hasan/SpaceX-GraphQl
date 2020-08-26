@@ -1,3 +1,40 @@
+const ASSETS = [
+  "/",
+  "https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap",
+   "https://spacexdata.herokuapp.com/graphql",
+   "./App.tsx",
+   "./index.tsx",
+   "hover.css",
+   "App.css",
+    "./generated/graphql",
+    "./components/assets/spacex.png",
+    "./components/Launch/app.tsx",
+    "./components/Launch/launch.tsx",
+    "./components/Launch/query.ts",
+    "./components/Launch/styles.css",
+    "./components/LaunchDet/app.tsx",
+    "./components/LaunchDet/launchdet.tsx",
+    "./components/LaunchDet/query.ts",
+    "./components/LaunchDet/styles.css",
+    "./components/navbar/navbar.tsx",
+    "./components/navbar/stlyes.css",
+    './components/loading.tsx'
+  ];
+  let cache_name = "Spacex"; // The string used to identify our cache
+
+self.addEventListener("install", event => {
+    console.log("installing...");
+    event.waitUntil(
+        caches
+            .open(cache_name)
+            .then(cache => {
+                return cache.addAll(ASSETS);
+            })
+            .catch(err => console.log(err))
+    );
+});
+
+
 
 const isLocalhost = Boolean(
     window.location.hostname === 'localhost' ||
