@@ -37,7 +37,7 @@ const LaunchDet: React.FC<Props> = ({ data }) => {
                     !!data.launch?.links && !!data.launch.links.flickr_images && (
                         <div className='img-item'>
                             {data.launch.links.flickr_images.map((image, i) =>
-                                image ? <div><img src={image} key={i} height='300px' width="300px" alt={i.toString()} /></div> : null
+                                image ? <div key={i}><img src={image}  height='300px' width="300px" alt={i.toString()} /></div> : null
                             )}
                         </div>
                     )

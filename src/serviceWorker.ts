@@ -1,26 +1,3 @@
-// const CACHE_NAME = "v-1"
-// const urls = [
-//   "/",
-//   "https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap",
-//   "https://spacexdata.herokuapp.com/graphql",
-//   "./App.tsx",
-//   "./index.tsx",
-//   "hover.css",
-//   "App.css",
-//   "./generated/graphql",
-//   "./components/assets/spacex.png",
-//   "./components/Launch/app.tsx",
-//   "./components/Launch/launch.tsx",
-//   "./components/Launch/query.ts",
-//   "./components/Launch/styles.css",
-//   "./components/LaunchDet/app.tsx",
-//   "./components/LaunchDet/launchdet.tsx",
-//   "./components/LaunchDet/query.ts",
-//   "./components/LaunchDet/styles.css",
-//   "./components/navbar/navbar.tsx",
-//   "./components/navbar/stlyes.css",
-//   './components/loading.tsx'
-// ];
 
 const isLocalhost = Boolean(
   window.location.hostname === 'localhost' ||

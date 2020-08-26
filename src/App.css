@@ -8,7 +8,9 @@
 .loading-center{
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 250px;
+    flex-direction: column;
 }
 .main{
     background-color: black;
